@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:groceries_app/screens/login.dart';
+import 'package:groceries_app/screens/register.dart';
 import 'package:groceries_app/screens/signin.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -47,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SigninScreen()),
+                        MaterialPageRoute(builder: (context) => Register()),
                       );
                     },
                     child: Text(

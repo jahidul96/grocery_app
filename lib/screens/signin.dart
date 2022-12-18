@@ -63,7 +63,7 @@ class _SigninScreenState extends State<SigninScreen> {
                 SizedBox(height: 25),
                 SizedBox(
                   width: double.infinity,
-                  height: 50,
+                  height: 45,
                   child: SignInButton(
                     Buttons.FacebookNew,
                     onPressed: () {},
@@ -72,7 +72,7 @@ class _SigninScreenState extends State<SigninScreen> {
                 SizedBox(height: 15),
                 SizedBox(
                   width: double.infinity,
-                  height: 50,
+                  height: 45,
                   child: SignInButton(
                     Buttons.GoogleDark,
                     onPressed: () {},

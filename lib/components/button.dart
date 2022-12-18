@@ -1,4 +1,4 @@
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -21,18 +21,18 @@ class ReuseableButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: ElevatedButton(
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: size,
-            fontWeight: fontWeight,
-            color: color,
-          ),
+    return ElevatedButton(
+      style: ButtonStyle(
+          backgroundColor: MaterialStatePropertyAll<Color>(Colors.green)),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: size,
+          fontWeight: fontWeight,
+          color: color,
         ),
-        onPressed: onPressed,
       ),
+      onPressed: onPressed,
     );
   }
 }
