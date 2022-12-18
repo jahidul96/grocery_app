@@ -1,0 +1,97 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:groceries_app/components/TextWidget.dart';
+import 'package:groceries_app/components/button.dart';
+
+class ProductCardComp extends StatelessWidget {
+  const ProductCardComp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 20),
+      child: Wrap(spacing: 10, children: [
+        Product(),
+        Product(),
+        Product(),
+        Product(),
+        Product(),
+      ]),
+    );
+  }
+}
+
+// product
+class Product extends StatelessWidget {
+  const Product({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 160,
+      padding: EdgeInsets.all(10),
+      margin: EdgeInsets.only(bottom: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0.0, 1.0), //(x,y)
+            blurRadius: 6.0,
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: 50,
+            margin: EdgeInsets.only(bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/image/item.png"),
+              ),
+            ),
+          ),
+          TextWidget(
+            text: "Organic Bananas",
+            fontsize: 17,
+            fontweight: FontWeight.bold,
+          ),
+          SizedBox(height: 10),
+          TextWidget(
+            text: "7pcs, Priceg",
+            fontsize: 14,
+            fontweight: FontWeight.w400,
+            color: Colors.grey,
+          ),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextWidget(
+                text: "\$4.5",
+                fontsize: 17,
+                fontweight: FontWeight.bold,
+              ),
+              Container(
+                width: 45,
+                child: ReuseableButton(
+                  text: "+",
+                  size: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}

@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 
+// homeprofile comp
 class HomeProfileComp extends StatelessWidget {
   const HomeProfileComp({super.key});
 
@@ -15,7 +16,7 @@ class HomeProfileComp extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 35,
+            height: 30,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/image/carrot.png"))),
@@ -32,11 +33,61 @@ class HomeProfileComp extends StatelessWidget {
               TextWidget(
                 text: "Dhaka, Banassre",
                 fontweight: FontWeight.bold,
-                fontsize: 16,
+                fontsize: 15,
               ),
             ],
           )
         ],
+      ),
+    );
+  }
+}
+
+// searchcomp content
+class SearchBarComp extends StatelessWidget {
+  const SearchBarComp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 45,
+      padding: EdgeInsets.only(left: 10),
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 206, 203, 203),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      child: Row(
+        children: [
+          Icon(Icons.search),
+          SizedBox(width: 8),
+          TextWidget(
+            text: "Search",
+            fontsize: 15,
+          )
+        ],
+      ),
+    );
+  }
+}
+
+// slidercomp content
+
+class SliderComp extends StatelessWidget {
+  const SliderComp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 15, bottom: 15),
+      height: 150,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/image/sliderimg.png"),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
       ),
     );
   }
