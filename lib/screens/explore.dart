@@ -1,8 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
+import 'package:groceries_app/components/categories.dart';
 import 'package:groceries_app/components/reuseableComp.dart';
+import 'package:groceries_app/screens/search.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});
@@ -22,8 +26,18 @@ class ExplorePage extends StatelessWidget {
       body: Container(
           margin: EdgeInsets.only(left: 15, right: 15, top: 15),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SearchBarComp(),
+              SearchBarComp(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SearchPage()),
+                  );
+                },
+              ),
+              CategoriesComp(),
             ],
           )),
     );

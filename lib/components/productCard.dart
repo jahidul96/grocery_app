@@ -21,17 +21,26 @@ class ProductCardComp extends StatelessWidget {
     }
 
     return Container(
+      width: double.infinity,
       margin: EdgeInsets.only(top: 20),
-      child: Wrap(spacing: 10, children: [
-        InkWell(
-          child: Product(),
-          onTap: navigateToDetails,
-        ),
-        Product(),
-        Product(),
-        Product(),
-        Product(),
-      ]),
+      child: Wrap(
+        spacing: 10,
+        children: [
+          InkWell(
+            child: Product(),
+            onTap: navigateToDetails,
+          ),
+          Product(),
+          Product(),
+          Product(),
+          Product(),
+          Product(),
+          Product(),
+          Product(),
+          Product(),
+          Product(),
+        ],
+      ),
     );
   }
 }
@@ -45,7 +54,7 @@ class Product extends StatelessWidget {
     return Container(
       width: 160,
       padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(bottom: 10),
+      margin: EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
