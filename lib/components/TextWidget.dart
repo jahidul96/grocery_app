@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class TextWidget extends StatelessWidget {
   final String text;
+  double? height;
   Color? color;
   double fontsize;
   FontWeight? fontweight;
@@ -19,6 +20,7 @@ class TextWidget extends StatelessWidget {
     this.textOverflow = TextOverflow.ellipsis,
     this.color = Colors.black,
     this.fontweight,
+    this.height,
   });
 
   @override
@@ -26,11 +28,11 @@ class TextWidget extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        color: color,
-        fontSize: fontsize,
-        overflow: textOverflow,
-        fontWeight: fontweight,
-      ),
+          color: color,
+          fontSize: fontsize,
+          overflow: textOverflow,
+          fontWeight: fontweight,
+          height: height),
     );
   }
 }

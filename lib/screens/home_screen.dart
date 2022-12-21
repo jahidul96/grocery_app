@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 import 'package:groceries_app/components/productCard.dart';
 import 'package:groceries_app/components/reuseableComp.dart';
+import 'package:groceries_app/screens/explore.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,7 +32,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 margin: EdgeInsets.only(top: 15),
                 child: Column(
                   children: [
-                    SearchBarComp(),
+                    SearchBarComp(onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ExplorePage()),
+                      );
+                    }),
                     SliderComp(),
                   ],
                 ),

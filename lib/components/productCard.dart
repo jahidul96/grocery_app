@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sort_child_properties_last
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,16 +6,27 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 import 'package:groceries_app/components/button.dart';
+import 'package:groceries_app/screens/details.dart';
 
 class ProductCardComp extends StatelessWidget {
   const ProductCardComp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    void navigateToDetails() {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => FoodDetails()),
+      );
+    }
+
     return Container(
       margin: EdgeInsets.only(top: 20),
       child: Wrap(spacing: 10, children: [
-        Product(),
+        InkWell(
+          child: Product(),
+          onTap: navigateToDetails,
+        ),
         Product(),
         Product(),
         Product(),

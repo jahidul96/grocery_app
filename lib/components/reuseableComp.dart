@@ -1,10 +1,11 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
+import 'package:groceries_app/screens/explore.dart';
 
 // homeprofile comp
 class HomeProfileComp extends StatelessWidget {
@@ -45,28 +46,31 @@ class HomeProfileComp extends StatelessWidget {
 
 // searchcomp content
 class SearchBarComp extends StatelessWidget {
-  const SearchBarComp({super.key});
+  Function()? onTap;
+  SearchBarComp({super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
-      padding: EdgeInsets.only(left: 10),
-      decoration: BoxDecoration(
-        color: Color.fromARGB(255, 206, 203, 203),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      child: Row(
-        children: [
-          Icon(Icons.search),
-          SizedBox(width: 8),
-          TextWidget(
-            text: "Search",
-            fontsize: 15,
-          )
-        ],
-      ),
-    );
+        height: 45,
+        padding: EdgeInsets.only(left: 10),
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 206, 203, 203),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        ),
+        child: InkWell(
+          child: Row(
+            children: [
+              Icon(Icons.search),
+              SizedBox(width: 8),
+              TextWidget(
+                text: "Search Store",
+                fontsize: 15,
+              )
+            ],
+          ),
+          onTap: onTap,
+        ));
   }
 }
 
