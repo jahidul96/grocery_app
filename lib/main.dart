@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:groceries_app/screens/bottomNavigation.dart';
 import 'package:groceries_app/screens/welcome.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
-      home: WelcomeScreen(),
+      home: MainPage(),
     );
   }
 }
