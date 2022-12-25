@@ -22,6 +22,7 @@ class ExplorePage extends StatelessWidget {
           fontweight: FontWeight.bold,
           fontsize: 17,
         ),
+        centerTitle: true,
       ),
       body: Container(
           margin: EdgeInsets.only(left: 15, right: 15, top: 15),
