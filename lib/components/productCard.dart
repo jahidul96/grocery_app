@@ -21,27 +21,26 @@ class ProductCardComp extends StatelessWidget {
     }
 
     return Container(
-      width: double.infinity,
-      margin: EdgeInsets.only(top: 20),
-      child: Wrap(
-        spacing: 10,
-        children: [
-          InkWell(
-            child: Product(),
-            onTap: navigateToDetails,
-          ),
-          Product(),
-          Product(),
-          Product(),
-          Product(),
-          Product(),
-          Product(),
-          Product(),
-          Product(),
-          Product(),
-        ],
-      ),
-    );
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 20),
+        child: Wrap(
+          spacing: 10,
+          children: [
+            InkWell(
+              child: Product(),
+              onTap: navigateToDetails,
+            ),
+            Product(),
+            Product(),
+            Product(),
+            Product(),
+            Product(),
+            Product(),
+            Product(),
+            Product(),
+            Product(),
+          ],
+        ));
   }
 }
 

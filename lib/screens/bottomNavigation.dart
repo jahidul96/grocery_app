@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:groceries_app/screens/cart.dart';
 import 'package:groceries_app/screens/explore.dart';
 import 'package:groceries_app/screens/home_screen.dart';
 import 'package:groceries_app/screens/profile.dart';
@@ -20,6 +21,7 @@ class _MainPageState extends State<MainPage> {
     HomeScreen(),
     SearchPage(),
     ExplorePage(),
+    MyCartPage(),
     ProfilePage(),
   ];
   void _onItemTapped(int index) {
@@ -49,6 +51,10 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.explore),
             label: 'Explore',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_bag),
+            label: 'Cart',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

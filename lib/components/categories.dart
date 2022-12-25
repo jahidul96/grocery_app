@@ -58,13 +58,7 @@ class SingleCategorie extends StatelessWidget {
             ),
           ),
           TextWidget(
-            text: "Frash Fruits",
-            fontsize: 15,
-            fontweight: FontWeight.bold,
-            textOverflow: TextOverflow.visible,
-          ),
-          TextWidget(
-            text: " & Vegetable",
+            text: "Frash Fruits & Vegetable",
             fontsize: 15,
             fontweight: FontWeight.bold,
             textOverflow: TextOverflow.visible,

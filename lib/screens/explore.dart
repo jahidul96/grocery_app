@@ -26,8 +26,6 @@ class ExplorePage extends StatelessWidget {
       body: Container(
           margin: EdgeInsets.only(left: 15, right: 15, top: 15),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SearchBarComp(
                 onTap: () {
