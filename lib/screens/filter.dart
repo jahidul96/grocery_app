@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 import 'package:groceries_app/components/selectcheck.dart';
+import 'package:groceries_app/screens/bottomNavigation.dart';
 import 'package:groceries_app/screens/search.dart';
 
 class ProductFilterPage extends StatefulWidget {
@@ -62,7 +63,7 @@ class _ProductFilterPageState extends State<ProductFilterPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SearchPage()),
+                        MaterialPageRoute(builder: (context) => MainPage()),
                       );
                     },
                   ),
