@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 import 'package:groceries_app/components/productCard.dart';
 import 'package:groceries_app/components/searchIconWidget.dart';
+import 'package:groceries_app/screens/filter.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -38,6 +39,13 @@ class _SearchPageState extends State<SearchPage> {
                         Icons.menu_open,
                         size: 30,
                       ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductFilterPage()),
+                        );
+                      },
                     ),
                   )
                 ],
