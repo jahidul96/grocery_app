@@ -30,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // top profile comp
               HomeProfileComp(),
 
+              // search comp
               Container(
                 margin: EdgeInsets.only(top: 15),
                 child: Column(
@@ -45,6 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 10),
+
+              // Exclusive offer text
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -61,8 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+              SizedBox(height: 20),
 
-              ProductCardComp()
+              // product content
+              ProductCardComp(),
+              SizedBox(height: 20),
             ],
           ),
         ),

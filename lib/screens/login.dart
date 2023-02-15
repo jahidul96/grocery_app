@@ -1,8 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/InputWidget.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 import 'package:groceries_app/components/button.dart';
@@ -20,10 +18,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   // gotoHome
   void login() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => HomeScreen()),
-    );
+    Navigator.pushNamed(context, '/main');
   }
 
   @override
@@ -166,10 +161,7 @@ class _LoginState extends State<Login> {
                           fontweight: FontWeight.bold,
                         ),
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Register()),
-                          );
+                          Navigator.pushNamed(context, '/register');
                         },
                       )
                     ],

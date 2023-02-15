@@ -22,12 +22,12 @@ class _SearchPageState extends State<SearchPage> {
       body: Container(
         width: double.infinity,
         margin: EdgeInsets.only(top: 40),
-        padding: EdgeInsets.only(left: 10, right: 10),
         child: Column(
           children: [
             // topbarcomp
             Container(
               margin: EdgeInsets.only(bottom: 10),
+              padding: EdgeInsets.only(left: 10, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -54,11 +54,10 @@ class _SearchPageState extends State<SearchPage> {
 
             Expanded(
               child: SingleChildScrollView(
-                  child: Container(
-                padding: EdgeInsets.only(left: 4),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                 child: ProductCardComp(),
-              )),
-            )
+              ),
+            ),
           ],
         ),
       ),

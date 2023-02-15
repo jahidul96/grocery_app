@@ -1,11 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/screens/bottomNavigation.dart';
-import 'package:groceries_app/screens/home_screen.dart';
 
 class SearchIconWidet extends StatelessWidget {
   const SearchIconWidet({super.key});
@@ -15,11 +11,11 @@ class SearchIconWidet extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 10, right: 10),
       width: double.infinity,
-      height: 50,
+      height: 45,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 216, 213, 213),
+        color: Colors.grey.shade300,
         borderRadius: BorderRadius.all(
-          Radius.circular(10),
+          Radius.circular(20),
         ),
       ),
       child: Row(
@@ -46,8 +42,8 @@ class SearchIconWidet extends StatelessWidget {
             ),
           ),
           Container(
-            width: 35,
-            height: 35,
+            width: 30,
+            height: 30,
             margin: EdgeInsets.only(left: 8),
             decoration: BoxDecoration(
               color: Colors.blue,

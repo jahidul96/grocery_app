@@ -1,9 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 
 class CartItem extends StatelessWidget {
@@ -13,16 +10,11 @@ class CartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromARGB(255, 223, 220, 220).withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 3,
-            offset: Offset(0, 3), // changes position of shadow
-          ),
-        ],
+        border: Border(
+          bottom: BorderSide(color: Colors.grey.shade300),
+        ),
       ),
-      margin: EdgeInsets.only(top: 20, bottom: 15),
+      margin: EdgeInsets.only(bottom: 15),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(

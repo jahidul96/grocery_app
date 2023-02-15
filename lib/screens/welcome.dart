@@ -1,11 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:groceries_app/screens/login.dart';
 import 'package:groceries_app/screens/register.dart';
-import 'package:groceries_app/screens/signin.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -47,10 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Register()),
-                      );
+                      Navigator.pushNamed(context, '/register');
                     },
                     child: Text(
                       "Get Started",

@@ -18,11 +18,11 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   List pages = [
-    HomeScreen(),
-    SearchPage(),
-    ExplorePage(),
-    MyCartPage(),
-    ProfilePage(),
+    const HomeScreen(),
+    const SearchPage(),
+    const ExplorePage(),
+    const MyCartPage(),
+    const ProfilePage(),
   ];
   void _onItemTapped(int index) {
     setState(() {

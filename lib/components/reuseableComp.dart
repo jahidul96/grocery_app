@@ -1,11 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
-import 'package:groceries_app/screens/explore.dart';
 
 // homeprofile comp
 class HomeProfileComp extends StatelessWidget {
@@ -55,8 +51,8 @@ class SearchBarComp extends StatelessWidget {
         height: 45,
         padding: EdgeInsets.only(left: 10),
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 206, 203, 203),
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          color: Colors.grey.shade300,
+          borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         child: InkWell(
           child: Row(
@@ -66,6 +62,7 @@ class SearchBarComp extends StatelessWidget {
               TextWidget(
                 text: "Search Store",
                 fontsize: 15,
+                color: Colors.grey.shade700,
               )
             ],
           ),

@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:groceries_app/screens/bottomNavigation.dart';
+import 'package:groceries_app/screens/details.dart';
+import 'package:groceries_app/screens/login.dart';
+import 'package:groceries_app/screens/register.dart';
 import 'package:groceries_app/screens/welcome.dart';
 
 void main() {
@@ -19,7 +22,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
-      home: MainPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => WelcomeScreen(),
+        '/register': (context) => Register(),
+        '/login': (context) => Login(),
+        '/main': (context) => MainPage(),
+        '/details': (context) => FoodDetails(),
+      },
     );
   }
 }

@@ -1,8 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/InputWidget.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 import 'package:groceries_app/components/button.dart';
@@ -20,10 +18,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   // gotoHome
   void register() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => HomeScreen()),
-    );
+    Navigator.pushNamed(context, '/main');
   }
 
   @override
@@ -139,7 +134,7 @@ class _RegisterState extends State<Register> {
                     width: double.infinity,
                     height: 45,
                     child: ReuseableButton(
-                      text: "Login",
+                      text: "Register",
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       onPressed: register,
@@ -163,10 +158,7 @@ class _RegisterState extends State<Register> {
                           fontweight: FontWeight.bold,
                         ),
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Login()),
-                          );
+                          Navigator.pushNamed(context, '/login');
                         },
                       )
                     ],

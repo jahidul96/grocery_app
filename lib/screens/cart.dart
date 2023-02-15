@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceries_app/components/TextWidget.dart';
 import 'package:groceries_app/components/cartItem.dart';
 
@@ -17,17 +15,20 @@ class _MyCartPageState extends State<MyCartPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: TextWidget(
           text: "Cart",
           fontweight: FontWeight.bold,
         ),
-        elevation: 0,
+        elevation: 1,
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: const [
+            CartItem(),
+            CartItem(),
             CartItem(),
             CartItem(),
             CartItem(),
@@ -39,7 +40,7 @@ class _MyCartPageState extends State<MyCartPage> {
         width: double.infinity,
         height: 70,
         alignment: Alignment.center,
-        padding: EdgeInsets.only(left: 15, right: 15),
+        padding: const EdgeInsets.only(left: 15, right: 15),
         child: MaterialButton(
             minWidth: double.infinity,
             height: 50,
