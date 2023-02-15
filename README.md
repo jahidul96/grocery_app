@@ -3,10 +3,11 @@
 Demo Screen :
 
 <div style={{
-    display: flex,
-    
-}}>
-<img src="./assets/screenshots/welcome.png" style={{width: 200, height: 300}}>
-<img src="./assets/screenshots/welcome.png" style={{width: 200, height: 300}}>
-
+     display: flex,
+     align-items: center
+     }}>
+<img src="https://github.com/jahidul96/grocery_app/blob/main/assets/screenshots/welcome.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/grocery_app/blob/main/assets/screenshots/welcome.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/grocery_app/blob/main/assets/screenshots/welcome.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/grocery_app/blob/main/assets/screenshots/welcome.png" width="200" height="400" />
 </div>
