@@ -28,4 +28,4 @@ This is a groceyapp ui. if you want to clone and customize it you can go for it.
 just clone and run flutter pub get and you are ready to rock
 
 
-give a star and if you need any help knock me!
+# give a star and enjoy... if you need any help knock me!
